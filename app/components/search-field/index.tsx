@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { useDebounce } from "use-debounce";
 import { useRouter, useSearchParams } from "next/navigation";
+import { X } from "lucide-react";
 
 export default function SearchField() {
     const searchParams = useSearchParams();
@@ -24,12 +25,17 @@ export default function SearchField() {
     }, [debouncedQuery, router]);
 
     return (
-        <input
-            type="text"
-            placeholder="Search for a cocktail..."
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            className="border p-2 rounded w-full mb-4"
-        />
+        <div className="flex items-center bg-white border rounded w-full mb-4 gap-2 pr-2">
+            <input
+                type="text"
+                placeholder="Search for a cocktail..."
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+                className="w-full p-2"
+            />
+            <button onClick={() => setText('')}>
+                <X size={24} />
+            </button>
+        </div>
     );
 }
