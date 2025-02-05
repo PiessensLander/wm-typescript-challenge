@@ -13,6 +13,7 @@ export async function GET(request: NextRequest) {
         .toSorted((a, b) => a.totalAmount - b.totalAmount)
         .map(({ totalAmount, ...rest }) => rest); // Remove previously added property
 
-    await new Promise((resolve) => setTimeout(resolve, 1e3));
+
+    await new Promise((resolve) => setTimeout(resolve, 5000));
     return new Response(JSON.stringify(sortedCocktails.slice(0, parseInt(limit))));
 }
