@@ -9,8 +9,8 @@ export const Card = ({ cocktail }: { cocktail: Cocktail }) => {
 
         <h3 className="text-lg font-bold">Ingredients</h3>
         <ul className="list-inside list-disc px-1 text-sm">
-          {cocktail.ingredients.map((item) => (
-            <li key={item.ingredient}>
+          {cocktail.ingredients.map((item, index) => (
+            <li key={`${item.ingredient}-${index}`}>
 
               {item.special
                 ? <span className="font-semibold">{item.special}</span>
