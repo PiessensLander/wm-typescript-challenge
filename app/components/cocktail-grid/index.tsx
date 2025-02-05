@@ -4,9 +4,11 @@ import CocktailGridSkeleton from "./skeleton";
 
 type GridType = "popular" | "all"
 
-export const CocktailGrid = async ({ type = "all", query, currentPage }: { type?: GridType, query?: string, currentPage?: number }) => {
+export const CocktailGrid = async ({ type = "all", searchParams }: { type?: GridType, query?: string, searchParams?: { q?: string } }) => {
+    const query = searchParams?.q || "";
 
     async function fetchCocktails() {
+        console.log("fetch")
         const url = query
             ? `${process.env.NEXT_PUBLIC_API_URL}/cocktails?q=${query}`
             : type === "popular"
