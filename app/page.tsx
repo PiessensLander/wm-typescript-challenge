@@ -1,19 +1,25 @@
-export default function Home() {
+import { Card } from "./components/card"
+
+export default async function Home() {
+
+  async function fetchCocktails() {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/cocktails/popular`)
+    return res.json()
+  }
+
+  const data = await fetchCocktails()
+
   return (
     <main>
-      <div className="mb-4 space-y-3 rounded border border-gray-200 bg-white/25 p-5 text-sm">
-        <p className="block text-radial">
-          👷🏻‍♂️ Please remove this block and show the{" "}
-          <strong>most popular recipes</strong> here.
-        </p>
-        <p className="block">
-          <span>You can use the api endpoint </span>
-          <code className="text-sm font-light">/api/recipes/popular</code>.
-        </p>
-      </div>
-      <ul>
-        <li></li>
+      <h1 className="text-2xl font-bold mb-4">Most popular cocktails</h1>
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4">
+        {data && data.map((item: Cocktail) => (
+          <li className="col-span-1 lg:col-span-3" key={item.name}>
+            <Card cocktail={item} />
+          </li>
+        ))}
       </ul>
     </main>
-  );
+  )
+
 }
