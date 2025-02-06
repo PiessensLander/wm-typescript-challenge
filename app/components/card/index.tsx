@@ -3,7 +3,7 @@ export const Card = ({ cocktail }: { cocktail: Cocktail }) => {
     <div className="flex border border-gray-200 bg-white/50 p-4">
       <div className="block space-y-2">
         <h2 className="text-2xl font-bold">{cocktail.name}</h2>
-        {cocktail.category && <span className="mr-1 inline-block rounded bg-pink-200 px-2 py-1 text-xs font-semibold uppercase text-pink-600 last:mr-0">
+        {cocktail.category && <span className="mr-1 inline-block rounded bg-pink-200 px-2 py-1 text-xs font-semibold uppercase text-pink-800 last:mr-0">
           {cocktail.category}
         </span>}
 

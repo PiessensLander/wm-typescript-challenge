@@ -10,5 +10,5 @@ So I can easily browse them on any device.
 
 ## ✅ Acceptance criteria
 
-- The cocktail list is displayed in a grid layout that adapts to different screen sizes
-- Ensure the layout is accessible (following WCAG AA compliance).
+[x] The cocktail list is displayed in a grid layout that adapts to different screen sizes
+[x] Ensure the layout is accessible (following WCAG AA compliance).

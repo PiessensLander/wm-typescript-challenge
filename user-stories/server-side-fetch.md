@@ -10,7 +10,7 @@ So the recipes page loads efficiently with pre-rendered data.
 
 ## ✅ Acceptance criteria
 
-- The cocktail recipes are fetched from the /api/cocktails endpoint and rendered server-side.
+[x] The cocktail recipes are fetched from the /api/cocktails endpoint and rendered server-side.
 
 ## 💡 Tips
 

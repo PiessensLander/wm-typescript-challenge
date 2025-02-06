@@ -33,7 +33,7 @@ export default function SearchField() {
                 onChange={(e) => setText(e.target.value)}
                 className="w-full p-2"
             />
-            <button onClick={() => setText('')}>
+            <button onClick={() => setText('')} aria-label="Clear search field">
                 <X size={24} />
             </button>
         </div>
