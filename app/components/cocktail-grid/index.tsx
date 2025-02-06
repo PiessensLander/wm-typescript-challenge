@@ -1,6 +1,4 @@
 import { Card } from "../card"
-import { Suspense } from "react";
-import CocktailGridSkeleton from "./skeleton";
 
 type GridType = "popular" | "all"
 

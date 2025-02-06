@@ -10,9 +10,9 @@ So I can browse the website easily on different screen sizes, including mobile d
 
 ## ✅ Acceptance criteria
 
-- The navigation adapts to different screen sizes (mobile, tablet, desktop)
-- Ensure links in the navigation are functional
-- Make sure the navigation is accessible (following [WCAG’s AA compliance](https://www.w3.org/WAI/standards-guidelines/wcag/)) using **a11y** (accessibility) best practices.
+[x] The navigation adapts to different screen sizes (mobile, tablet, desktop)
+[x] Ensure links in the navigation are functional
+[x] Make sure the navigation is accessible (following [WCAG’s AA compliance](https://www.w3.org/WAI/standards-guidelines/wcag/)) using **a11y** (accessibility) best practices.
 
 ## 💡 Tips
 

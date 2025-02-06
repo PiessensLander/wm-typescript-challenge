@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Navbar } from "./components";
 import "./globals.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-pampas`}>
+        <Link
+          className="transition left-0 bg-black text-white text-primary-content absolute p-3 m-3 -translate-y-16 focus:translate-y-0"
+          href="#main">Go to main content
+        </Link>
         <Navbar />
         <div className="container mx-auto py-6">{children}</div>
       </body>
-    </html>
+    </html >
   );
 }
